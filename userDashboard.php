@@ -4,7 +4,7 @@
     $latitude_user = $_POST['latitude'];
     $longitude_user = $_POST['longitude'];
 	
-    $query = "SELECT * FROM restaurants";
+    $query = "SELECT * FROM restaurants WHERE is_active='1";
     $result = $connect->query($query);
     $data =[];
     $i=0;

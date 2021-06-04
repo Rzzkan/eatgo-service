@@ -15,6 +15,7 @@
             'username' => $row["username"],
             'role' => $row["role"],
             'name' => $row["name"],
+            'address' => $row["address"],
             'phone' => $row["phone"],
             'image' => $row["image"],
             'password' => $row["password"]

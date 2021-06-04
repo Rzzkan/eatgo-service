@@ -5,8 +5,9 @@
 	$name = $_POST['name'];
 	$address = $_POST['address'];
 	$link= $_POST['link'];
+	$phone= $_POST['phone'];
 	
-	$query = mysqli_query($connect,"INSERT INTO restaurants (name,address,link) VALUES('$name','$address','$link')");
+	$query = mysqli_query($connect,"INSERT INTO restaurants (name,address,link,phone) VALUES('$name','$address','$link','$phone')");
 
 	if ($query===TRUE) {
 		$id_restaurant = mysql_insert_id();

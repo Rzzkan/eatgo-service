@@ -6,7 +6,7 @@
 	$img_name = "$id_user.jpg";
     $img_path = "User/$img_name";
 	
-	$query = mysqli_query($connect,"UPDATE users SET img='$img_path' WHERE id_user='$id_user'");
+	$query = mysqli_query($connect,"UPDATE users SET image='$img_path' WHERE id_user='$id_user'");
 	file_put_contents($img_path,base64_decode($img));
 	
     //Handle Response

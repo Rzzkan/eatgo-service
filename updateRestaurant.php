@@ -5,9 +5,10 @@
 	$name = $_POST['name'];
 	$address = $_POST['address'];
 	$link = $_POST['link'];
+	$phone= $_POST['phone'];
 
 	
-	$query = mysqli_query($connect,"UPDATE restaurants SET name='$name', address='$address', link='$link' WHERE id_restaurant='$id_restaurant'");
+	$query = mysqli_query($connect,"UPDATE restaurants SET name='$name', address='$address', link='$link' , phone='$phone' WHERE id_restaurant='$id_restaurant'");
 	
     //Handle Response
 	if ($query) {
