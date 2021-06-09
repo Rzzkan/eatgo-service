@@ -2,7 +2,7 @@
     include "connection.php";
     $id= $_POST['id_restaurant'];
 	
-    $query = "SELECT * FROM menus WHERE id_restaurant='$id'";
+    $query = "SELECT * FROM menus WHERE id_restaurant='$id' AND is_active='1'";
     $result = $connect->query($query);
     $data =[];
     $i=0;

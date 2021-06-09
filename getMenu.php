@@ -1,17 +1,19 @@
 <?php
     include "connection.php";
-    $id= $_POST['id_restaurant'];
+
+     $id_menu = $_POST['id_menu'];
+    
 	
-    $query = "SELECT * FROM menus WHERE id_restaurant='$id'";
+    $query = "SELECT * FROM menus WHERE id_menu = '$id_menu' ";
     $result = $connect->query($query);
     $data =[];
-    $i=0;
+
 
 	if ($result->num_rows>0) {
 
         while($row = $result->fetch_assoc()) {
-            $data[$i] = [
-            'id_menu' => $row["id_menu"],
+            $data = [
+           'id_menu' => $row["id_menu"],
             'id_restaurant' => $row["id_restaurant"],
             'name' => $row["name"],
             'description' => $row["description"],
@@ -20,7 +22,6 @@
             'price' => $row["price"],
             'is_active' => $row["is_active"]
             ];
-            $i = $i + 1;
         }
         $response->success = 1;
         $response->message = "Get Data Success";
