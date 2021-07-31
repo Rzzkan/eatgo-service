@@ -18,6 +18,7 @@
             'category' => $row["category"],
             'image' => $row["image"],
             'price' => $row["price"],
+            'point_earned' => $row["point_earned"],
             'is_active' => $row["is_active"]
             ];
             $i = $i + 1;

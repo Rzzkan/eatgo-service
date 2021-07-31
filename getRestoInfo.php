@@ -2,8 +2,7 @@
     include "connection.php";
 
      $id_restaurant = $_POST['id_restaurant'];
-    
-	
+
     $query = "SELECT * FROM restaurants WHERE id_restaurant = '$id_restaurant' ";
     $result = $connect->query($query);
     $data =[];

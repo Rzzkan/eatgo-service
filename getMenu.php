@@ -13,13 +13,14 @@
 
         while($row = $result->fetch_assoc()) {
             $data = [
-           'id_menu' => $row["id_menu"],
+            'id_menu' => $row["id_menu"],
             'id_restaurant' => $row["id_restaurant"],
             'name' => $row["name"],
             'description' => $row["description"],
             'category' => $row["category"],
             'image' => $row["image"],
             'price' => $row["price"],
+            'point_earned' => $row["point_earned"],
             'is_active' => $row["is_active"]
             ];
         }
