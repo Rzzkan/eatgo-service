@@ -7,12 +7,13 @@
 	$description = $_POST['description'];
 	$category = $_POST['category'];
 	$price = $_POST['price'];
+	$is_active = $_POST['is_active'];
 	$img = $_POST['image'];
 	$img_name = "$name.jpg";
 	$img_path = "Menu/$img_name";
 	
 	
-	$query = mysqli_query($connect,"UPDATE menus SET name='$name', description='$description', category='$category', price='$price', image='$img_path' WHERE id_menu='$id_menu'");
+	$query = mysqli_query($connect,"UPDATE menus SET name='$name', description='$description', category='$category', price='$price', image='$img_path' , is_active='$is_active' WHERE id_menu='$id_menu'");
 		file_put_contents($img_path,base64_decode($img));
 	
     //Handle Response

@@ -3,7 +3,7 @@
 
      $id_restaurant = $_POST['id_restaurant'];
 
-    $query = "SELECT * FROM restaurants WHERE id_restaurant = '$id_restaurant' ";
+    $query = "SELECT u.id_user, r.id_restaurant, r.name, r.image, r.phone, r.address, r.link, r.latitude, r.longitude, r.is_active FROM restaurants r INNER JOIN users u ON r.id_restaurant = u.id_restaurant WHERE r.id_restaurant = '$id_restaurant' ";
     $result = $connect->query($query);
     $data =[];
 
@@ -12,6 +12,7 @@
 
         while($row = $result->fetch_assoc()) {
             $data = [
+            'id_user' => $row["id_user"],
             'id_restaurant' => $row["id_restaurant"],
             'name' => $row["name"],
             'image' => $row["image"],
