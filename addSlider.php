@@ -1,9 +1,9 @@
 <?php
 	include "connection.php";
 
-	$id_user = $_POST['id_user'];
+	$name = $_POST['name'];
 	$img = $_POST['img'];
-	$img_name = "$id_user.jpg";
+	$img_name = "$name.jpg";
     $img_path = "User/$img_name";
 	
 	$query = mysqli_query($connect,"INSERT INTO sliders (image) VALUES ('$img_path')");

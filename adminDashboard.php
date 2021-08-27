@@ -9,7 +9,7 @@
 
     $query_resto = mysqli_query($connect,"SELECT count(id_restaurant) as total FROM restaurants")or die(mysqli_error());
     $resto_data = mysqli_fetch_array($query_resto);
-    $total_resto= (int) $user_data['total'];
+    $total_resto= (int) $resto_data['total'];
 
     $query_review = mysqli_query($connect,"SELECT count(id_rating) as total FROM ratings")or die(mysqli_error());
     $review_data = mysqli_fetch_array($query_review);
